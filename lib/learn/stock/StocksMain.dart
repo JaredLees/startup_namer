@@ -30,17 +30,19 @@ class _StocksLocalizationsDelegate extends LocalizationsDelegate<StockStrings> {
   bool shouldReload(_StocksLocalizationsDelegate old) => false;
 }
 
+/// 股票app
 class StocksApp extends StatefulWidget {
   @override
   StocksAppState createState() => StocksAppState();
 }
 
 class StocksAppState extends State<StocksApp> {
-  StockData stocks;
+  StockData stocks; /// 股票s
 
+  ///  股票配置
   StockConfiguration _configuration = StockConfiguration(
-    stockMode: StockMode.optimistic,
-    backupMode: BackupMode.enabled,
+    stockMode: StockMode.optimistic, /// 暖色
+    backupMode: BackupMode.enabled, /// 是否备份
     debugShowGrid: false,
     debugShowSizes: false,
     debugShowBaselines: false,
@@ -63,7 +65,7 @@ class StocksAppState extends State<StocksApp> {
     });
   }
 
-  ThemeData get theme {
+  ThemeData get theme { ///
     switch (_configuration.stockMode) {
       case StockMode.optimistic:
         return ThemeData(
