@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
           child: new Container(
             height: 500.0,
             color: Colors.lightBlue,
-            child: MyList(items : new List<String>.generate(1000, (i)=> "item $i")),
+            child: MyList(items : new List<String>.generate(1000, (i)=> "item $i"),),
           ),
         ),
       ),

@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 import 'package:flutter/material.dart';
 import 'package:startup_namer/cusi/CuSiApp.dart';
+import 'package:startup_namer/learn/mystock/my_stock_app.dart';
 import 'package:startup_namer/learn/stock/StocksMain.dart';
 
 void main() {

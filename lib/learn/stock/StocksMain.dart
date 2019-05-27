@@ -80,6 +80,7 @@ class StocksAppState extends State<StocksApp> {
     return null;
   }
 
+  /// dynamic 与 object 等义
   Route<dynamic> _getRoute(RouteSettings settings) {
     if (settings.name == '/stock') {
       final String symbol = settings.arguments;
@@ -105,6 +106,7 @@ class StocksAppState extends State<StocksApp> {
     return MaterialApp(
       title: 'Stocks',
       theme: theme,
+      // 本地化委托
       localizationsDelegates: <LocalizationsDelegate<dynamic>>[
         _StocksLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,

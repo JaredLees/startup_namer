@@ -39,6 +39,8 @@ class Stock {
 }
 
 class StockData extends ChangeNotifier {
+
+  /// 初始化数据，一次会加载出所有的list数据
   StockData() {
     if (actuallyFetchData) {
       _httpClient = http.Client();

@@ -29,8 +29,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       Container(
         color: Colors.teal,
         child: new TabBar(tabs: <Widget>[
-          new Tab(text: "首页", icon: new Icon(Icons.info_outline, color: Colors.white,),),
-          new Tab(text: "发现", icon: new Icon(Icons.find_in_page, color: Colors.white),),
+          new Tab(text: "首页"),
+          new Tab(text: "发现"),
         ],
           controller: _tabController,
         ),
