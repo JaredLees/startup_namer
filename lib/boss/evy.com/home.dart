@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:startup_namer/boss/evy.com/page/company/company_view.dart';
+import 'package:startup_namer/boss/evy.com/page/jobs_view.dart';
+import 'package:startup_namer/boss/evy.com/page/messages_view.dart';
 import 'package:startup_namer/boss/evy.com/widget/IconTab.dart';
 
 class Home extends StatefulWidget{
@@ -8,7 +11,7 @@ class Home extends StatefulWidget{
   }
 }
 
-/// const double _ktabTextSize = 11.0;
+const double _ktabTextSize = 11.0;
 const Color _kPrimaryColor = Color.fromARGB(255, 0, 215, 198);
 const int INDEX_JOB = 0;
 const int INDEX_COMPANY = 1;
@@ -46,17 +49,20 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin{
   Widget build(BuildContext context) {
     return new Scaffold(
       body: new TabBarView(
-          children: <Widget>[ ///
-            Text("0"),
-            Text("1"),
-            Text("2"),
-            Text("3"),
+          children: <Widget>[ /// 和tabbar对应
+            new JobsTab(),new CompanyTab(),new MessageTab(),new JobsTab(),
           ],
-        controller: _controller,
+        controller: _controller, /// 绑定controller
       ),
       bottomNavigationBar: new Material(
         color: Colors.white,
         child: new TabBar(
+            controller: _controller, /// 绑定controller
+            indicatorSize: TabBarIndicatorSize.label,
+            labelStyle: new TextStyle(
+              fontSize: _ktabTextSize,
+
+            ),
             tabs: [
               new IconTab(
                 icon: _currentIndex == INDEX_JOB ?

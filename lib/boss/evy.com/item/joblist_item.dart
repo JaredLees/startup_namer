@@ -53,45 +53,44 @@ class JobListItem extends StatelessWidget{
                                   ],
                                 )
                             ),
+                          ],
+                        ),
 
-                            new Container(
-                              child: new Text(
-                                job.cname + " "+ job.size,
-                                textAlign: TextAlign.left,
-                                  style: new TextStyle(
-                                    fontSize: 15.0, color: Colors.grey
-                                  ),
-                              ),
-                              margin: const EdgeInsets.only(
+                        new Container(
+                          child: new Text(
+                            job.cname + " "+ job.size,
+                            textAlign: TextAlign.left,
+                            style: new TextStyle(
+                                fontSize: 15.0, color: Colors.grey
+                            ),
+                          ),
+                          margin: const EdgeInsets.only(
+                            top: 5.0,
+                            left: 10.0,
+                            bottom: 5.0,
+                          ),
+                        ),
+
+                        new Divider(),
+
+                        new Row(
+                          children: <Widget>[
+                            new Padding(
+                              padding: const EdgeInsets.only(
                                 top: 5.0,
                                 left: 10.0,
-                                bottom: 5.0,
+                                right: 5.0,
+                                bottom: 15.0,
+                              ),
+                              child: new Text(
+                                job.username + " " + job.title,
+                                style: new TextStyle(
+                                  color: new Color.fromARGB(255, 0, 215, 100),
+                                ),
                               ),
                             ),
-
-                            new Divider(),
-
-                            new Row(
-                              children: <Widget>[
-                                new Padding(
-                                    padding: const EdgeInsets.only(
-                                      top: 5.0,
-                                      left: 10.0,
-                                      right: 5.0,
-                                      bottom: 15.0,
-                                    ),
-                                  child: new Text(
-                                    job.username + " " + job.title,
-                                    style: new TextStyle(
-                                      color: new Color.fromARGB(255, 0, 215, 100),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            )
-
                           ],
-                        )
+                        ),
                     ],
                   )
               )
