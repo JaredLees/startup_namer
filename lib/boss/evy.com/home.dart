@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:startup_namer/boss/evy.com/page/company/company_view.dart';
 import 'package:startup_namer/boss/evy.com/page/jobs_view.dart';
 import 'package:startup_namer/boss/evy.com/page/messages_view.dart';
+import 'package:startup_namer/boss/evy.com/page/mine_view.dart';
 import 'package:startup_namer/boss/evy.com/widget/IconTab.dart';
 
 class Home extends StatefulWidget{
@@ -50,7 +51,7 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin{
     return new Scaffold(
       body: new TabBarView(
           children: <Widget>[ /// 和tabbar对应
-            new JobsTab(),new CompanyTab(),new MessageTab(),new JobsTab(),
+            new JobsTab(),new CompanyTab(),new MessageTab(),new MineMain(),
           ],
         controller: _controller, /// 绑定controller
       ),
