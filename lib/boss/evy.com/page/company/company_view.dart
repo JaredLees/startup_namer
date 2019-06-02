@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:startup_namer/boss/evy.com/item/companylist_item.dart';
 import 'package:startup_namer/boss/evy.com/models/company.dart';
+import 'package:startup_namer/boss/evy.com/page/company/company_detai.dart';
 
 class CompanyTab extends StatefulWidget {
   @override
@@ -40,8 +41,13 @@ class CompanyList extends State<CompanyTab>{
 
     return new GestureDetector(
       onTap: (){
-        showDialog(context: context, child: new AlertDialog(
+        /*showDialog(context: context, child: new AlertDialog(
           content: new Text("敬请期待", style: new TextStyle(fontSize: 20.0),),
+        ));*/
+        Navigator.push(context, new MaterialPageRoute(
+            builder: (BuildContext buildContext) {
+              return new  CompanyDetail(_company);
+            }
         ));
       },
       child: new CompanyListItem(_company),
